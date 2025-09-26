@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+.profile-snippet {
+  width: 250px;
+  height: 69px;
+  background-color: #FED09E;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: fixed;
+  top: 15px; /* هماهنگ با هدر و لوگو */
+  right: 50px; /* فاصله کمتر از 84px سایدبار */
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* انیمیشن نرم برای هاور */
+}
+
+.profile-snippet:hover {
+  background-color: #FEC080; /* پس‌زمینه تیره‌تر هنگام هاور */
+  transform: scale(1.05); /* بزرگ‌نمایی ملایم */
+  cursor: pointer; /* نشانگر کلیک */
+}
+
+.profile-snippet:hover .arrow {
+  color: #E54200 !important; /* تغییر رنگ فلش هنگام هاور */
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* فاصله بین اواتار و متن‌ها */
+}
+
+.avatar {
+  width: 50px; /* سایز مناسب برای اواتار */
+  height: 50px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* فاصله 6px بین نام و نقش */
+}
+
+.name {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700; /* bold */
+  color: #000000;
+}
+
+.role {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300; /* light */
+  color: #000000;
+}
+
+.arrow {
+  font-size: 24px !important;
+  color: #000000;
+  transition: color 0.3s ease; /* انیمیشن برای تغییر رنگ فلش */
+}
+
+@media (max-width: 768px) {
+  .profile-snippet {
+    width: 200px;
+    height: 60px;
+    top: 0px; /* هماهنگ با لوگو و هدر در موبایل */
+    right: 10px;
+    padding: 0 10px;
+  }
+
+  .profile-snippet:hover {
+    background-color: #FEC080;
+    transform: scale(1.03); /* مقیاس کوچکتر در موبایل */
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .arrow {
+    font-size: 20px !important;
+  }
+}

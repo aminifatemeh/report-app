@@ -1,0 +1,20 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FCF9F6;
+}
+
+.content {
+  margin-left: 198px; /* 114px (عرض سایدبار) + 84px (فاصله از چپ) */
+  margin-top: 132px; /* زیر سایدبار */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 90px; /* 80px (عرض سایدبار در موبایل) + 10px */
+    margin-top: 70px; /* زیر سایدبار در موبایل */
+  }
+}

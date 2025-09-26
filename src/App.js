@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout/MainLayout';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Students from './pages/Students/Students';
+import Reports from './pages/Reports/Reports';
+import Uploads from './pages/Uploads/Uploads';
+import Calendar from './pages/Calendar/Calendar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route element={<MainLayout />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/students" element={<Students />} />
+                    <Route path="/reports" element={<Reports />} />
+                    <Route path="/uploads" element={<Uploads />} />
+                    <Route path="/calendar" element={<Calendar />} />
+                    <Route path="/" element={<Dashboard />} /> {/* صفحه پیش‌فرض */}
+                </Route>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

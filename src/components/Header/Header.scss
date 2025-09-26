@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.header {
+  position: fixed;
+  top: 5px; /* هم‌تراز با پروفایل و لوگو */
+  left: 246px; /* 114px (عرض لوگو) + 84px (فاصله لوگو از چپ) + 48px (فاصله از لوگو) */
+  right: 350px; /* 250px (عرض پروفایل) + 50px (فاصله از راست) + 50px (فضای اضافی) */
+  display: flex;
+  align-items: center;
+  height: 85px; /* هم‌ارتفاع با پروفایل */
+}
+
+.page-title {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 0px; /* هم‌تراز با پروفایل و لوگو در موبایل */
+    left: 138px; /* 80px (عرض لوگو) + 10px (فاصله سایدبار) + 48px (فاصله از لوگو) */
+    right: 220px; /* 200px (عرض پروفایل در موبایل) + 10px (فاصله) + 10px */
+    height: 60px;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+}

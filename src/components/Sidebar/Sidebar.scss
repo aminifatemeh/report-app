@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.sidebar {
+  width: 114px;
+  height: 150vh;
+  position: fixed;
+  top: 110px;
+  left: 84px;
+  background-color: #FDFDFD;
+  border: 1px solid #000000;
+  border-radius: 20px 20px 0 0;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-menu li {
+  margin-bottom: 45px;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #E54200;
+  transform: scale(1.1);
+}
+
+.sidebar-link:hover svg {
+  color: #E54200 !important;
+}
+
+.sidebar-link.active {
+  color: #E54200;
+  background-color: #FFE0CC;
+  border-radius: 8px;
+  padding: 5px;
+  transform: scale(0.95);
+}
+
+.sidebar-link.active svg {
+  color: #E54200 !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    left: 10px;
+    top: 70px; /* 0px (top پروفایل/لوگو) + 60px (ارتفاع پروفایل در موبایل) + 10px */
+    height: calc(100vh - 70px);
+  }
+
+  .sidebar-menu li {
+    margin-bottom: 40px;
+  }
+
+  .sidebar-link {
+    font-size: 12px;
+  }
+}
