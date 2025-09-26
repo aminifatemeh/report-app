@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.overview {
+  position: absolute;
+  top: 110px; /* هم‌تراز با سایدبار */
+  left: calc(12.375rem + 1rem); /* 198px (سایدبار + فاصله) + 1rem فاصله اضافی */
+  background-color: #FDFDFD;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
+  padding: 1.25rem; /* کمی کوچکتر */
+  width: calc(100% - 38rem); /* عرض نسبی با احتساب سایدبارها */
+  min-height: 11.25rem; /* ارتفاع تقریبی 180px */
+  box-sizing: border-box;
+}
+
+.overview-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.875rem; /* 30px، کمی کوچکتر */
+  font-weight: 700; /* bold */
+  color: #000000;
+  margin: 0 0 1rem 0; /* فاصله کمتر */
+}
+
+.metrics-container {
+  display: flex;
+  gap: 1.25rem; /* فاصله 20px بین مستطیل‌ها */
+}
+
+@media (max-width: 768px) {
+  .overview {
+    top: 70px; /* هماهنگ با سایدبار در موبایل */
+    left: calc(5.625rem + 0.625rem); /* 90px (سایدبار در موبایل) + 0.625rem */
+    width: calc(100% - 17rem);
+    min-height: 8.75rem; /* ارتفاع تقریبی 140px */
+    padding: 0.75rem;
+  }
+
+  .overview-title {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .metrics-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

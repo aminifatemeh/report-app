@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+.metric-card {
+  flex: 1; /* عرض نسبی */
+  min-height: 5rem; /* ارتفاع تقریبی 80px */
+  border: 1px solid #9F9285;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* انیمیشن نرم برای هاور */
+}
+
+.metric-card:hover {
+  background-color: #F5F5F5; /* پس‌زمینه تیره‌تر */
+  transform: scale(1.05); /* بزرگ‌نمایی ملایم */
+  cursor: pointer; /* نشانگر کلیک */
+}
+
+.metric-card:hover .icon-container svg {
+  color: #E54200 !important; /* تغییر رنگ آیکون */
+}
+
+.icon-container {
+  width: 45px; /* تقریبی 32px */
+  height: 45px;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700; /* bold */
+  color: #000000;
+}
+
+.metric-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500; /* medium */
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .metric-card {
+    min-height: 3.75rem; /* تقریبی 60px */
+  }
+
+  .metric-card:hover {
+    transform: scale(1.03); /* مقیاس کوچکتر در موبایل */
+  }
+
+  .icon-container {
+    width: 1.5rem; /* تقریبی 24px */
+    height: 1.5rem;
+  }
+
+  .metric-title {
+    font-size: 1rem; /* 16px */
+  }
+
+  .metric-subtitle {
+    font-size: 0.625rem; /* 10px */
+  }
+}
