@@ -8,8 +8,9 @@
 .content {
   margin-left: 198px; /* 114px (عرض سایدبار) + 84px (فاصله از چپ) */
   margin-top: 132px; /* زیر سایدبار */
-  padding: 20px;
+  padding: 0 20px 20px;
   flex-grow: 1;
+  background-color: lightcoral;
 }
 
 @media (max-width: 768px) {

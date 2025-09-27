@@ -1,3 +1,45 @@
 .dashboard {
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* 60% چپ، 40% راست */
+  position: absolute;
+  top: 110px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* فاصله بین Overview و bottom-section */
+}
+
+.bottom-section {
+  display: flex;
+  gap: 1.875rem; /* فاصله 30px بین Notifications و Students */
+
+  height: 55vh;
+}
+
+.right-section {
+  background-color: #f3e5f5; /* رنگ پس‌زمینه برای تشخیص */
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr; /* عمودی در موبایل */
+    margin-left: 5.625rem; /* هماهنگ با سایدبار در موبایل */
+    height: calc(100vh - 70px);
+  }
+
+  .left-section {
+    gap: calc(8.75rem + 1rem); /* هماهنگ با Overview در موبایل */
+  }
+
+  .bottom-section {
+    flex-direction: column; /* عمودی در موبایل */
+    gap: 1rem;
+  }
+
+  .right-section {
+    display: none; /* سایدبار راست در موبایل مخفی می‌شه */
+  }
 }
