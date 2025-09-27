@@ -26,6 +26,48 @@ const notifications = [
   },
 ];
 
+const students = [
+  {
+    id: 1,
+    name: "Julian Cross",
+    gender: "male",
+    term: 2,
+    level: 2,
+  },
+  {
+    id: 2,
+    name: "Emma Stone",
+    gender: "female",
+    term: 1,
+    level: 3,
+  },
+  {
+    id: 3,
+    name: "Liam Parker",
+    gender: "male",
+    term: 3,
+    level: 1,
+  },
+  {
+    id: 4,
+    name: "Sophia Lee",
+    gender: "female",
+    term: 2,
+    level: 4,
+  },
+  {
+    id: 5,
+    name: "Noah Kim",
+    gender: "male",
+    term: 1,
+    level: 2,
+  },
+];
+
 export const getNotifications = () => {
   return notifications;
+};
+
+export const getStudents = () => {
+  return students;
 };
