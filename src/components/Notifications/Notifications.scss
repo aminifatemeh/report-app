@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;400&display=swap');
 
 .notifications {
   flex: 1; /* نصف عرض left-section */
   min-width: 25rem; /* تقریبی 400px */
-  height: 100%; /* تا آخر صفحه منهای Overview و فاصله */
+  height: 100%; /* هماهنگ با bottom-section */
   background-color: #FDFDFD;
   border: 1px solid #000000;
   border-radius: 20px;
   filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
   padding: 1.25rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-title {
@@ -20,14 +22,61 @@
   margin: 0 0 1rem 0;
 }
 
+.notification-list {
+  flex-grow: 1;
+  overflow-y: auto; /* اسکرول عمودی */
+  scrollbar-width: thin;
+  scrollbar-color: #969696 transparent;
+}
+
+/* استایل اسکرول‌بار برای مرورگرهای Webkit */
+.notification-list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background: #969696;
+  border-radius: 13px;
+}
+
+.notification-item {
+  background-color: transparent;
+  border: 2px solid; /* رنگ بردر از mockApi */
+  border-radius: 15px;
+  padding: 0.9375rem; /* 15px */
+  margin-bottom: 0.75rem; /* فاصله بین نوتیفیکیشن‌ها */
+  display: flex;
+  align-items: center;
+}
+
+.notification-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 400; /* معمولی */
+  color: #000000;
+}
+
 @media (max-width: 768px) {
   .notifications {
     min-width: auto; /* عرض انعطاف‌پذیر در موبایل */
-    height: calc(50vh - 70px - 1.5rem - 8.75rem); /* نصف ارتفاع در موبایل */
+    height: calc(50vh - 70px - 1.5rem - 8.75rem);
     padding: 0.75rem;
   }
 
   .section-title {
     font-size: 1.5rem; /* 24px */
+  }
+
+  .notification-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .notification-message {
+    font-size: 0.875rem; /* 14px */
   }
 }
