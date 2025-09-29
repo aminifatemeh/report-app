@@ -64,10 +64,52 @@ const students = [
   },
 ];
 
+const recentReports = [
+  {
+    id: 1,
+    name: "Julian Cross",
+    gender: "male",
+    date: "September 19, 2025",
+    session: 3,
+  },
+  {
+    id: 2,
+    name: "Emma Stone",
+    gender: "female",
+    date: "September 20, 2025",
+    session: 1,
+  },
+  {
+    id: 3,
+    name: "Liam Parker",
+    gender: "male",
+    date: "September 21, 2025",
+    session: 5,
+  },
+  {
+    id: 4,
+    name: "Sophia Lee",
+    gender: "female",
+    date: "September 22, 2025",
+    session: 2,
+  },
+  {
+    id: 5,
+    name: "Noah Kim",
+    gender: "male",
+    date: "September 23, 2025",
+    session: 4,
+  },
+];
+
 export const getNotifications = () => {
   return notifications;
 };
 
 export const getStudents = () => {
   return students;
+};
+
+export const getRecentReports = () => {
+  return recentReports.sort((a, b) => new Date(b.date) - new Date(a.date));
 };

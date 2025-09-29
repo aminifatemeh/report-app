@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.dashboard-right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* فاصله 16px بین مستطیل‌ها */
+  height: calc(100vh - 130px); /* هماهنگ با داشبورد، منهای پدینگ */
+  padding: 0 1.875rem; /* فاصله 30px از چپ و راست */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .dashboard-right-sidebar {
+    display: none; /* مخفی در موبایل */
+  }
+}
