@@ -1,0 +1,34 @@
+.students-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 60% چپ، 40% راست */
+  position: absolute;
+  top: 110px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* فاصله مشابه داشبورد */
+}
+
+.right-section {
+  /* سایدبار راست */
+}
+
+@media (max-width: 768px) {
+  .students-page {
+    grid-template-columns: 1fr; /* عمودی در موبایل */
+    margin-left: 5.625rem; /* هماهنگ با سایدبار در موبایل */
+    height: calc(100vh - 70px);
+  }
+
+  .left-section {
+    gap: calc(8.75rem + 1rem); /* هماهنگ با داشبورد در موبایل */
+  }
+
+  .right-section {
+    display: none; /* سایدبار راست در موبایل مخفی */
+  }
+}

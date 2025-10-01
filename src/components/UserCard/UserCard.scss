@@ -8,8 +8,7 @@
   padding: 0.75rem;
   margin: 0.75rem;
   background-color: #FDFDFD;
-  width: 85%; /* کاهش عرض برای فاصله از اسکرول */
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-width 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-width 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 
@@ -24,6 +23,11 @@
   border-width: 2px; /* بردر پررنگ‌تر */
 }
 
+.user-card.selected {
+  background-color: #FFEEDB; /* پس‌زمینه هنگام انتخاب */
+  border-color: #FF1A00; /* بردر قرمز */
+}
+
 .avatar-container {
   width: 2.5rem; /* 40px */
   height: 2.5rem;
@@ -32,11 +36,24 @@
   justify-content: center;
   align-items: center;
   margin-right: 0.75rem;
+  position: relative;
 }
 
 .avatar-icon {
   width: 2rem; /* 24px */
   height: 2rem;
+}
+
+.session-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem; /* 10px */
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #6B7280; /* خاکستری تیره */
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem; /* فاصله از فلش */
+  line-height: 1;
 }
 
 .user-info {
@@ -60,16 +77,31 @@
   color: #000000;
 }
 
-.session-badge {
+.profile-button {
   font-family: 'Inter', sans-serif;
-  font-size: 0.625rem; /* 10px */
-  font-weight: 700;
-  color: #FFFFFF;
-  background-color: #6B7280; /* خاکستری تیره */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400;
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
   border-radius: 8px;
   padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem; /* فاصله از فلش */
-  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.profile-button.view:hover {
+  background-color: #F5F5F5;
+}
+
+.profile-button.close {
+  background-color: #FED09E; /* رنگ هنگام انتخاب */
+  border: none;
+  color: #000000;
+}
+
+.profile-button.close:hover {
+  background-color: #FEC88A; /* کمی تیره‌تر برای هاور */
 }
 
 .arrow-icon {
@@ -104,6 +136,11 @@
 
   .session-badge {
     font-size: 0.5rem; /* 8px */
+    padding: 0.2rem 0.4rem;
+  }
+
+  .profile-button {
+    font-size: 0.75rem; /* 12px */
     padding: 0.2rem 0.4rem;
   }
 }

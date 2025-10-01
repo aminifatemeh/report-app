@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+.students-right-sidebar {
+  flex: 1; /* کل ارتفاع سایدبار */
+  background-color: #FDFDFD;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.25));
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 130px); /* هماهنگ با داشبورد، منهای پدینگ */
+  overflow-x: hidden; /* حذف اسکرول افقی */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #C4C0C0;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 0.625rem; /* فاصله 10px از لیست */
+}
+
+.search-icon {
+  color: #C4C0C0;
+  margin-right: 0.5rem;
+}
+
+.sort-select {
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 400;
+  color: #000000;
+  background: transparent;
+  width: 100%;
+}
+
+.sort-select:focus {
+  outline: none;
+}
+
+.students-list {
+  flex-grow: 1;
+  overflow-y: auto; /* اسکرول عمودی */
+  overflow-x: hidden; /* حذف اسکرول افقی */
+  padding-right: 0.5rem; /* فاصله از اسکرول‌بار */
+  scrollbar-width: thin;
+  scrollbar-color: #969696 transparent;
+}
+
+.students-list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.students-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.students-list::-webkit-scrollbar-thumb {
+  background: #969696;
+  border-radius: 13px;
+}
+
+@media (max-width: 768px) {
+  .students-right-sidebar {
+    display: none; /* مخفی در موبایل */
+  }
+}
